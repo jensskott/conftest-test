@@ -18,7 +18,7 @@ spec:
         ports:
         - containerPort: 8080
         env:
-        - name: ALT_GREETING
+        - name: ALT_GREETING_2
           valueFrom:
             configMapKeyRef:
               name: the-map
