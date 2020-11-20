@@ -33,4 +33,4 @@ jobs:
         sudo mv kustomize /usr/local/bin
     - name: Run tests
       run: |
-        action-conftest -env=development-eu -kustomize=true -overlays=kustomize/overlays -policy=kubernetes
+        action-conftest -env=development-eu -kustomize=true -overlays=kustomization/overlays -policy=kubernetes
