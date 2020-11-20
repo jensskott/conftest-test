@@ -17,7 +17,8 @@ jobs:
         version: "latest"
         file: "action-conftest"
         token: ${{ secrets.TOKEN }}
-        
-    - name: Check the binary
+
+    - name: Run tests
       run: |
-        ls -lah
+        chmod +x action-conftest
+        action-conftest -env=development-eu -kustomize=true -overlays=kustomize/overlays -policy=kubernetes
