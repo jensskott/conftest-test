@@ -20,5 +20,5 @@ jobs:
 
     - name: Run tests
       run: |
-        chmod +x action-conftest
+        sudo chmod +x action-conftest
         action-conftest -env=development-eu -kustomize=true -overlays=kustomize/overlays -policy=kubernetes
