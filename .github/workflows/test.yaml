@@ -11,8 +11,13 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Get binary
-      run: |
-        wget https://github.com/loveholidays/action-conftest/releases/download/0.3/action-conftest
+      uses: dsaltares/fetch-gh-release-asset@master
+      with:
+        repo: "loveholidays/action-conftest"
+        version: "latest"
+        file: "action-conftest"
+        token: ${{ secrets.TOKEN }}
+        
     - name: Check the binary
       run: |
         ls -lah
